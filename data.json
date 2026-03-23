@@ -2,7 +2,7 @@
     "header": {
         "avatar": "/static/images/profile-timyeo.jpg",
         "name": "The Quiet Achiever",
-        "content": "Author | Coach | Podcast<br><br>Tiny habits to have impact at work (without pretending to be an extrovert).<br><br>Follow me 👇🏻"
+        "content": "📕 Author | 💪🏻 Career Coach | 🙋🏻‍♂️ Courses<br>Tiny habits to have impact at work (without pretending to be an extrovert).<br><br>Follow me 👇🏻"
     },
     "links": [
         {
@@ -13,8 +13,14 @@
         },
         {
             "id": "6d4534e0",
-            "title": "Buy the book",
+            "title": "<bold>Buy the physical book</bold><br>Paperback | Hardcover",
             "href": "https://mybook.to/thequietachiever/opt/1?iguid=VOkXVuwjvEeN-O3PzV88QQ",
+            "image": "/static/images/icon-book.jpg"
+        },
+        {
+            "id": "b5a48122",
+            "title": "<bold>Buy the digital book</bold><br>eBook | Audiobook",
+            "href": "https://payhip.com/TheQuietAchiever",
             "image": "/static/images/icon-book.jpg"
         },
         {

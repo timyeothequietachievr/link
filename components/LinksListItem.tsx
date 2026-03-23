@@ -115,7 +115,8 @@ export default function LinksListItem({
                             />
                         </div>
                     }
-                    <h2>{item.title}</h2>
+                    <h2 dangerouslySetInnerHTML={{ __html: item.title }} />
+                    {/* <h2>{item.title}</h2> */}
                 </a>
                 <button
                     className="flex justify-center items-center absolute top-1/2 right-1 -translate-y-1/2 w-12 h-12 opacity-1 xl:opacity-0 group-hover:opacity-100 transition duration-300"
