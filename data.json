@@ -2,9 +2,15 @@
     "header": {
         "avatar": "/static/images/profile-timyeo.jpg",
         "name": "The Quiet Achiever",
-        "content": "We help quiet achievers have impact at work without pretending to be extroverts. Follow me 👇🏻"
+        "content": "Tiny habits to have impact at work (without pretending to be an extrovert). Follow me 👇🏻"
     },
     "links": [
+        {
+            "id": "6d4534e0",
+            "title": "Follow on Linkedin",
+            "href": "https://www.thequietachievr.com/followonlinkedin",
+            "image": "/static/images/icon-linkedin.svg"
+        },
         {
             "id": "6d4534e0",
             "title": "Buy the book",
@@ -49,7 +55,7 @@
         },
         {
             "title": "Instagram",
-            "href": "https://www.instagram.com",
+            "href": "https://www.instagram.com/thequietachievr",
             "component": "instagram"
         },
         {
