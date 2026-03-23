@@ -34,8 +34,8 @@ export default function Home({
                 <div className="px-4">
                     <div className="max-w-[680px] mx-auto">
                         <LinksListHeader {...header} />
-                        <LinksList links={links} setHasShareLink={setHasShareLink} />
                         <SocialMediasList socialMedias={socials} />
+                        <LinksList links={links} setHasShareLink={setHasShareLink} />
                     </div>
                 </div>
             </section>
