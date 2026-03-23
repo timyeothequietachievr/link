@@ -42,7 +42,8 @@ export default function LinksListHeader({
                         y="100%"
                     >
                         <div className="mt-1 px-10 text-sm text-white text-center sm:text-base">
-                            <p>{content}</p>
+                            <p dangerouslySetInnerHTML={{ __html: content }} />
+                            {/* <p>{content}</p> */}
                         </div>
                     </TranslateIn>
                 </div>
