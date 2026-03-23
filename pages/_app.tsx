@@ -8,13 +8,13 @@ import { NextPage } from 'next';
 import { TopBarContextProvider } from '@/context/topBarContext';
 import { ModalContextProvider } from '@/context/modalContext';
 import Layout from '@/components/Layout';
-import { Space_Mono, Atkinson_Hyperlegible } from 'next/font/google';
+import { Atkinson_Hyperlegible } from 'next/font/google';
 {/* import { Space_Mono, Inter } from 'next/font/google'; */}
 import classNames from 'classnames';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const spaceMono = Space_Mono({
+const spaceMono = Atkinson_Hyperlegible({
     fallback: ['sans-serif'],
     weight: ['400', '700'],
     subsets: ['latin'],
