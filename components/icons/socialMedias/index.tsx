@@ -4,6 +4,8 @@ import Instagram from './Instagram';
 import TikTok from './TikTok';
 import Spotify from './Spotify';
 import YouTube from './YouTube';
+import Linkedin from './Linkedin';
+import Threads from './Threads';
 
 
 type IconComponent = ({className}: {
@@ -20,7 +22,9 @@ const Icons: Icon = {
     instagram: Instagram,
     tiktok: TikTok,
     spotify: Spotify,
-    youtube: YouTube
+    youtube: YouTube,
+    linkedin: Linkedin,
+    threads: Threads, 
 }
 
 export default function Icon({

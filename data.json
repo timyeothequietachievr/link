@@ -7,81 +7,45 @@
     "links": [
         {
             "id": "6d4534e0",
-            "title": "React",
-            "href": "https://react.dev",
-            "image": "/static/images/react.jpg"
+            "title": "Buy the book",
+            "href": "https://mybook.to/thequietachiever/opt/1?iguid=VOkXVuwjvEeN-O3PzV88QQ",
+            "image": "/static/images/icon-book.jpg"
         },
         {
             "id": "728c7815",
-            "title": "Vue.js",
-            "href": "https://vuejs.org",
-            "image": "/static/images/vue.jpg"
+            "title": "Courses @ The Quiet Achiever School",
+            "href": "https://www.thequietachievr.com/school",
+            "image": ""
         },
         {
             "id": "39597e4e",
-            "title": "Next.js",
-            "href": "https://nextjs.org",
-            "image": "/static/images/next.jpg"
+            "title": "Coaching - Book a Chemistry Call",
+            "href": "https://www.thequietachievr.com/chemistrycall",
+            "image": ""
         },
         {
             "id": "d323b0e5",
-            "title": "Nuxt.js",
-            "href": "https://nuxt.com",
-            "image": "/static/images/nuxt.jpg"
+            "title": "Podcast - Listen Now",
+            "href": "https://www.thequietachievr.com/podcast",
+            "image": ""
         },
         {
             "id": "9c6fa6f5",
-            "title": "Tailwind",
-            "href": "https://tailwindcss.com/",
-            "image": "/static/images/tailwind.jpg"
-        },
-        {
-            "id": "461689fe",
-            "title": "Vercel",
-            "href": "https://vercel.com",
-            "image": "/static/images/vercel.jpg"
-        },
-        {
-            "id": "1fd37bfd",
-            "title": "Netlify",
-            "href": "https://www.netlify.com",
-            "image": "/static/images/netlify.jpg"
-        },
-        {
-            "id": "5aef1464",
-            "title": "Strapi",
-            "href": "https://strapi.io",
-            "image": "/static/images/strapi.jpg"
-        },
-        {
-            "id": "7a34ff4a",
-            "title": "Sanity",
-            "href": "https://www.sanity.io",
-            "image": "/static/images/sanity.jpg"
-        },
-        {
-            "id": "b5a48122",
-            "title": "Cosmic",
-            "href": "https://www.cosmicjs.com",
-            "image": "/static/images/cosmic.jpg"
-        },
-        {
-            "id": "7f665c4a",
-            "title": "Prisma",
-            "href": "https://www.prisma.io",
-            "image": "/static/images/prisma.jpg"
+            "title": "Signup for Newsletter",
+            "href": "https://www.thequietachievr.com/book#newsletter",
+            "image": ""
         }
     ],
     "socials": [
         {
-            "title": "Facebook",
-            "href": "https://www.facebook.com",
-            "component": "facebook"
+            "title": "Linkedin",
+            "href": "https://www.thequietachievr.com/followonlinkedin",
+            "component": "linkedin"
         },
         {
-            "title": "Twitter",
-            "href": "https://twitter.com",
-            "component": "twitter"
+            "title": "YouTube",
+            "href": "https://www.youtube.com/@thequietachievr",
+            "component": "youtube"
         },
         {
             "title": "Instagram",
@@ -89,19 +53,20 @@
             "component": "instagram"
         },
         {
+            "title": "Facebook",
+            "href": "https://www.facebook.com/thequietachievr",
+            "component": "facebook"
+        },
+        {
+            "title": "Threads",
+            "href": "https://www.threads.net/@thequietachievr",
+            "component": "threads"
+        },
+        {
             "title": "TikTok",
-            "href": "https://www.tiktok.com",
+            "href": "https://www.tiktok.com/@thequietachievr",
             "component": "tiktok"
-        },
-        {
-            "title": "Spotify",
-            "href": "https://open.spotify.com",
-            "component": "spotify"
-        },
-        {
-            "title": "Youtube",
-            "href": "https://www.youtube.com",
-            "component": "youtube"
         }
+        
     ]
 }
