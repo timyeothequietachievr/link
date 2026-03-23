@@ -13,13 +13,13 @@
         },
         {
             "id": "6d4534e0",
-            "title": "<bold>Buy the physical book</bold><br>Paperback | Hardcover",
+            "title": "<span style=\"font-size:1.1em; font-weight:700;\">Buy the physical book</span><br>Paperback | Hardcover",
             "href": "https://mybook.to/thequietachiever/opt/1?iguid=VOkXVuwjvEeN-O3PzV88QQ",
             "image": "/static/images/icon-book.jpg"
         },
         {
             "id": "b5a48122",
-            "title": "<bold>Buy the digital book</bold><br>eBook | Audiobook",
+            "title": "<span style=\"font-size:1.1em; font-weight:700;\">Buy the digital book</span><br>eBook | Audiobook",
             "href": "https://payhip.com/TheQuietAchiever",
             "image": "/static/images/icon-book.jpg"
         },
