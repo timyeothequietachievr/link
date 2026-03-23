@@ -23,7 +23,7 @@ export default function Layout({
                 <main id="content" className="relative flex flex-col justify-between min-h-screen">
                     <div className="u-radialGradient xl:fixed" />
                     {children}
-                    <Footer />
+                    {/* <Footer /> */}
                 </main>
                 <ShareModal name={header.name} title="Share this Linklist" />
             </div>

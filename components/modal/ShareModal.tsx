@@ -257,7 +257,7 @@ function ShareModal({
                             </li>
                             <li>
                                 <a
-                                    href={`mailto:?subject=Check out this Linklist! &body=${link?.title} - ${url}`}
+                                    href={`mailto:?subject=Check out The Quiet Achiever &body=${link?.title} - ${url}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
