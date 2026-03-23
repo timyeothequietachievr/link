@@ -1,8 +1,8 @@
 {
     "header": {
-        "avatar": "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500&q=80",
-        "name": "Username",
-        "content": "Everything you are. In one, simple link in bio."
+        "avatar": "/static/images/profile-timyeo.jpg",
+        "name": "The Quiet Achiever",
+        "content": "We help quiet achievers have impact at work without pretending to be extroverts. Follow me 👇🏻"
     },
     "links": [
         {
