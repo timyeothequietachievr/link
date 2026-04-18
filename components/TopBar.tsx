@@ -8,6 +8,7 @@ import Dots from './icons/Dots';
 import Share from './icons/share/Share';
 import FadeIn from './gsap/FadeIn';
 import classNames from 'classnames';
+import { trackEvent } from '@/lib/gtag';
 
 export default function TopBar({
     name,
@@ -73,7 +74,14 @@ export default function TopBar({
                             }
                         )}
                         title="Share"
-                        onClick={() => setModal(true, link, true)}
+                        onClick={() => {
+                            trackEvent('share_click', {
+                                location: 'top_bar',
+                                link_text: link.title,
+                                link_url: link.href
+                            });
+                            setModal(true, link, true);
+                        }}
                     >
                         {typeof windowSize.width === 'number' && windowSize.width <= 640 ? (
                             <Dots />

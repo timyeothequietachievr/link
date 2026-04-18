@@ -18,6 +18,7 @@ import Email from '../icons/share/Email';
 import Logo from '../icons/Logo';
 import Share from '../icons/share/Share';
 import classNames from 'classnames';
+import { trackEvent } from '@/lib/gtag';
 
 export default function useShareModal() {
     const { open, hasNativeSupport, link, setModal } = useModalContext();
@@ -69,9 +70,22 @@ function ShareModal({
     const { currentURL } = useWindowLocation();
     const url = link?.id ? `${currentURL.split('?')[0]}?share_link=${link?.id}` : link?.href;
 
+    // Fire GA4 recommended `share` event. Docs:
+    // https://developers.google.com/analytics/devguides/collection/ga4/reference/events#share
+    const trackShare = (method: string) => {
+        trackEvent('share', {
+            method,
+            content_type: 'link',
+            item_id: link?.id ?? link?.href ?? '',
+            link_text: link?.title ?? '',
+            link_url: url ?? ''
+        });
+    };
+
     const copyHandler = () => {
         copy(url ?? '');
         setIsCopying(true);
+        trackShare('copy');
     };
 
     useEffect(() => {
@@ -191,6 +205,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('facebook')}
                                 >
                                     <FacebookAlt />
                                     <div className="flex-1 mx-4">
@@ -205,6 +220,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('linkedin')}
                                 >
                                     <LinkedIn />
                                     <div className="flex-1 mx-4">
@@ -219,6 +235,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('twitter')}
                                 >
                                     <TwitterAlt />
                                     <div className="flex-1 mx-4">
@@ -233,6 +250,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('whatsapp')}
                                 >
                                     <WhatsApp />
                                     <div className="flex-1 mx-4">
@@ -247,6 +265,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('messenger')}
                                 >
                                     <Messenger />
                                     <div className="flex-1 mx-4">
@@ -261,6 +280,7 @@ function ShareModal({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-4 rounded-lg hover:bg-gray-200 transition-[background] duration-300"
+                                    onClick={() => trackShare('email')}
                                 >
                                     <Email />
                                     <div className="flex-1 mx-4">
