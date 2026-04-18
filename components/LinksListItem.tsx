@@ -7,6 +7,12 @@ import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import Image from 'next/image';
 import Share from '@/components/icons/share/Share';
 import classNames from 'classnames';
+import { trackEvent } from '@/lib/gtag';
+
+// Strip HTML tags from the title so GA events report clean text
+function stripHtml(input: string): string {
+    return input.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+}
 
 export default function LinksListItem({
     item,
@@ -81,6 +87,8 @@ export default function LinksListItem({
         return () => ctx.revert();
     }, []);
 
+    const cleanTitle = stripHtml(item.title);
+
     return (
         <li
             id={item.id}
@@ -103,6 +111,13 @@ export default function LinksListItem({
                     rel="noopener noreferrer"
                     className="relative block py-4 px-16 text-center"
                     title={item.title}
+                    onClick={() => trackEvent('link_click', {
+                        link_text: cleanTitle,
+                        link_url: item.href,
+                        link_id: item.id,
+                        location: 'links_list',
+                        outbound: true
+                    })}
                 >
                     {item.image &&
                         <div className="absolute top-1/2 left-1 -translate-y-1/2 w-12 h-12 rounded overflow-hidden">
@@ -121,7 +136,15 @@ export default function LinksListItem({
                 <button
                     className="flex justify-center items-center absolute top-1/2 right-1 -translate-y-1/2 w-12 h-12 opacity-1 xl:opacity-0 group-hover:opacity-100 transition duration-300"
                     title="Share"
-                    onClick={() => setModal(true, item)}
+                    onClick={() => {
+                        trackEvent('share_click', {
+                            link_text: cleanTitle,
+                            link_url: item.href,
+                            link_id: item.id,
+                            location: 'links_list'
+                        });
+                        setModal(true, item);
+                    }}
                 >
                     <div className="flex justify-center items-center w-10 h-10 rounded-full bg-white/10 xl:bg-transparent hover:bg-white/10 transition duration-300">
                         <Share />
