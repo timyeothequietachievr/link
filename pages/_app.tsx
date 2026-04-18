@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import type { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 import { NextPage } from 'next';
+import Script from 'next/script';
 import { TopBarContextProvider } from '@/context/topBarContext';
 import { ModalContextProvider } from '@/context/modalContext';
 import Layout from '@/components/Layout';
@@ -13,6 +14,8 @@ import { Atkinson_Hyperlegible } from 'next/font/google';
 import classNames from 'classnames';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const GA_MEASUREMENT_ID = 'G-TVY6L0GW07';
 
 const spaceMono = Atkinson_Hyperlegible({
     fallback: ['sans-serif'],
@@ -54,5 +57,22 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     /* Use the layout defined at the page level, if available */
     const getLayout = Component.getLayout || mainLayout;
 
-    return getLayout(<Component {...pageProps} {...data} className={classNames(spaceMono.variable, inter.variable)} />);
+    return (
+        <>
+            {/* Google Analytics (GA4) */}
+            <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_MEASUREMENT_ID}');
+                `}
+            </Script>
+            {getLayout(<Component {...pageProps} {...data} className={classNames(spaceMono.variable, inter.variable)} />)}
+        </>
+    );
 }
