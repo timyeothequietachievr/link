@@ -3,7 +3,7 @@ import useTopBarContext from '@/context/topBarContext';
 import useWindowSize from '@/hooks/useWindowSize';
 import useModalContext from '@/context/modalContext';
 import useWindowLocation from '@/hooks/useWindowLocation';
-import Image from 'next/image';
+import ProfileAvatar from './ProfileAvatar';
 import Dots from './icons/Dots';
 import Share from './icons/share/Share';
 import FadeIn from './gsap/FadeIn';
@@ -42,13 +42,7 @@ export default function TopBar({
                     }
                 )}
             >
-                <Image
-                    className="w-11 h-11 object-contain rounded-full"
-                    alt={name}
-                    src={avatar}
-                    width={44}
-                    height={44}
-                />
+                <ProfileAvatar src={avatar} alt={name} size={44} />
             </div>
             <div
                 className={classNames(

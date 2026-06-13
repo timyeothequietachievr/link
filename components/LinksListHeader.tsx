@@ -1,7 +1,7 @@
 import { ListHeader } from '@/lib/types';
-import Image from 'next/image';
 import FadeIn from './gsap/FadeIn';
 import TranslateIn from './gsap/TranslateIn';
+import ProfileAvatar from './ProfileAvatar';
 
 export default function LinksListHeader({
     avatar,
@@ -15,12 +15,10 @@ export default function LinksListHeader({
                     delay={0.2}
                     ease="sine.in"
                 >
-                    <Image
-                        className="w-24 h-24 object-contain rounded-full"
-                        alt={name}
+                    <ProfileAvatar
                         src={avatar}
-                        width={96}
-                        height={96}
+                        alt={name}
+                        size={96}
                         priority
                     />
                 </FadeIn>

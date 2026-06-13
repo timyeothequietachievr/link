@@ -1,8 +1,8 @@
 {
     "header": {
-        "avatar": "/static/images/profile-timyeo.jpg",
+        "avatar": "/static/images/profile-timyeo.png",
         "name": "The Quiet Achiever",
-        "content": "📕 Author | 💪🏻 Career Coach | 🙋🏻‍♂️ Courses<br>Tiny habits to have impact at work (without pretending to be an extrovert).<br><br>Follow me 👇🏻"
+        "content": "📕 Author | 💪🏻 Career Coach<br>I help ambitious Asian men in tech break through the bamboo ceiling to land $250k–$350k Principal &amp; Leadership roles —without dirty office politics | 3x Startup Design Leader<br><br>Follow me 👇🏻"
     },
     "links": [
         {
@@ -24,27 +24,9 @@
             "image": "/static/images/icon-book.jpg"
         },
         {
-            "id": "728c7815",
-            "title": "Courses @ The Quiet Achiever School",
-            "href": "https://www.thequietachievr.com/school",
-            "image": ""
-        },
-        {
-            "id": "39597e4e",
-            "title": "Coaching - Book a Chemistry Call",
-            "href": "https://www.thequietachievr.com/chemistrycall",
-            "image": ""
-        },
-        {
             "id": "d323b0e5",
             "title": "Podcast - Listen Now",
             "href": "https://www.thequietachievr.com/podcast",
-            "image": ""
-        },
-        {
-            "id": "9c6fa6f5",
-            "title": "Signup for Newsletter",
-            "href": "https://www.thequietachievr.com/book#newsletter",
             "image": ""
         }
     ],
