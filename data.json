@@ -2,7 +2,7 @@
     "header": {
         "avatar": "/static/images/profile-timyeo.png",
         "name": "The Quiet Achiever",
-        "content": "📕 Author | 💪🏻 Career Coach<br>I help ambitious Asian men in tech break through the bamboo ceiling to land $250k–$350k Principal &amp; Leadership roles —without dirty office politics | 3x Startup Design Leader<br><br>Follow me 👇🏻"
+        "content": "📕 Author | 💪🏻 Career Coach<br>I help ambitious Asian men in tech land $250k–$350k Principal &amp; Leadership roles — without dirty office politics | 3x Startup Design Leader<br><br>Follow me 👇🏻"
     },
     "links": [
         {
@@ -12,7 +12,13 @@
             "image": "/static/images/icon-linkedin.svg"
         },
         {
-            "id": "6d4534e0",
+            "id": "a8f21c04",
+            "title": "1:1 Coaching",
+            "href": "https://www.thequietachievr.com/coaching",
+            "image": ""
+        },
+        {
+            "id": "6d4534e1",
             "title": "<span style=\"font-size:1.1em; font-weight:700;\">Buy the physical book</span><br>Paperback | Hardcover",
             "href": "https://mybook.to/thequietachiever/opt/1?iguid=VOkXVuwjvEeN-O3PzV88QQ",
             "image": "/static/images/icon-book.jpg"
