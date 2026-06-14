@@ -15,7 +15,8 @@ import classNames from 'classnames';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const GA_MEASUREMENT_ID = 'G-TVY6L0GW07';
+import AnalyticsBoot from '@/components/AnalyticsBoot';
+import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 
 const spaceMono = Atkinson_Hyperlegible({
     fallback: ['sans-serif'],
@@ -73,6 +74,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
                 `}
             </Script>
             {getLayout(<Component {...pageProps} {...data} className={classNames(spaceMono.variable, inter.variable)} />)}
+            <AnalyticsBoot />
         </>
     );
 }

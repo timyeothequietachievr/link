@@ -1,6 +1,6 @@
 import { SocialMediaItem } from '@/lib/types';
 import Icon from './icons/socialMedias';
-import { trackEvent } from '@/lib/gtag';
+import { trackSocialClick } from '@/lib/analytics';
 
 export default function SocialMediasListItem({
     title,
@@ -14,13 +14,13 @@ export default function SocialMediasListItem({
             rel="noopener noreferrer"
             className="block mx-2 hover:scale-110 transition duration-300 mt-2"
             title={title}
-            onClick={() => trackEvent('social_click', {
-                link_text: title,
-                link_url: href,
-                platform: component,
-                location: 'social_bar',
-                outbound: true
-            })}
+            onClick={() =>
+                trackSocialClick({
+                    title,
+                    href,
+                    component,
+                })
+            }
         >
             <Icon component={component} className="w-8 h-8 text-white" />
         </a>

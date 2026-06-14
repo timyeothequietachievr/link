@@ -7,7 +7,7 @@ import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import Image from 'next/image';
 import Share from '@/components/icons/share/Share';
 import classNames from 'classnames';
-import { trackEvent } from '@/lib/gtag';
+import { trackEvent, trackLinkClick, getTrackedLinkHref } from '@/lib/analytics';
 
 // Strip HTML tags from the title so GA events report clean text
 function stripHtml(input: string): string {
@@ -106,18 +106,12 @@ export default function LinksListItem({
                 style={{...from}}
             >
                 <a
-                    href={item.href}
+                    href={getTrackedLinkHref(item, 'links_list')}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative block py-4 px-16 text-center"
                     title={item.title}
-                    onClick={() => trackEvent('link_click', {
-                        link_text: cleanTitle,
-                        link_url: item.href,
-                        link_id: item.id,
-                        location: 'links_list',
-                        outbound: true
-                    })}
+                    onClick={() => trackLinkClick(item, 'links_list')}
                 >
                     {item.image &&
                         <div className="absolute top-1/2 left-1 -translate-y-1/2 w-12 h-12 rounded overflow-hidden">

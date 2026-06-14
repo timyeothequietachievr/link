@@ -8,7 +8,7 @@ import Dots from './icons/Dots';
 import Share from './icons/share/Share';
 import FadeIn from './gsap/FadeIn';
 import classNames from 'classnames';
-import { trackEvent } from '@/lib/gtag';
+import { trackEvent } from '@/lib/analytics';
 
 export default function TopBar({
     name,

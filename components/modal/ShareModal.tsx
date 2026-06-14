@@ -18,7 +18,7 @@ import Email from '../icons/share/Email';
 import Logo from '../icons/Logo';
 import Share from '../icons/share/Share';
 import classNames from 'classnames';
-import { trackEvent } from '@/lib/gtag';
+import { trackEvent } from '@/lib/analytics';
 
 export default function useShareModal() {
     const { open, hasNativeSupport, link, setModal } = useModalContext();
