@@ -1,0 +1,54 @@
+---
+description: Require PostHog and GA tracking when adding links, buttons, or outbound CTAs on the bio links site.
+globs: components/**/*.{tsx,jsx},pages/**/*.{tsx,jsx,ts},lib/analytics.ts,lib/gtag.ts
+alwaysApply: false
+---
+
+# Analytics on links.thequietachievr.com
+
+When adding or changing **clickable links, buttons, or outbound CTAs**, instrument them for **PostHog and Google Analytics** (GA4 is already loaded in `pages/_app.tsx`).
+
+## Use the shared helpers
+
+- **`trackEvent(name, props)`** from `@/lib/analytics` — fires to PostHog + GA4
+- **`trackLinkClick(link, location)`** — main link cards in `LinksListItem`
+- **`trackSocialClick(item)`** — social icon bar
+- **`getTrackedLinkHref(link, location)`** — conversion/outbound links that should route via `/api/out/[id]`
+
+Do not call `window.gtag` or `posthog.capture` directly in components unless extending `lib/analytics.ts`.
+
+## New main link (in `data.json` + list)
+
+Main links are rendered by `LinksListItem`. If you add a row to `data.json`, no extra click code is needed — tracking is automatic.
+
+If you add a **new link UI** (not `LinksListItem`), mirror its pattern:
+
+```tsx
+onClick={() => trackLinkClick(item, "your_location_slug")}
+href={getTrackedLinkHref(item, "your_location_slug")}
+```
+
+## New button or secondary CTA
+
+Fire a named event with context:
+
+```tsx
+trackEvent("share_click", {
+  location: "top_bar",
+  link_text: "...",
+  link_url: "...",
+});
+```
+
+Use stable event names: `link_click`, `social_click`, `share_click`, `share`. Add new names only when the action is genuinely different.
+
+## Conversion / outbound destinations
+
+If the click should count toward coaching, book, or PayHip funnels, the destination must go through **`/api/out/[linkId]`** (use `getTrackedLinkHref` or classify as conversion in `lib/attribution.ts`).
+
+## Checklist before finishing
+
+- [ ] Click handler calls `trackEvent`, `trackLinkClick`, or `trackSocialClick`
+- [ ] Outbound conversion links use `/api/out/` when appropriate
+- [ ] Event properties include `location`, label/text, and URL where useful
+- [ ] No secrets or PII in event payloads
