@@ -34,6 +34,12 @@
             "title": "Podcast - Listen Now",
             "href": "https://www.thequietachievr.com/podcast",
             "image": ""
+        },
+        {
+            "id": "c91f7f2a",
+            "title": "Prompt My Notch — teleprompter that stays invisible on screen share",
+            "href": "https://www.promptmynotch.com/",
+            "image": "/static/images/icon-promptmynotch.png"
         }
     ],
     "socials": [
